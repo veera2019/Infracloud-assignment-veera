@@ -1,5 +1,4 @@
-cat > inputFile  <<- "EOF"
-0, 234
-1, 98
-2, 34
-EOF
+for i in 'seq 10'
+  do
+  echo $RANDOM
+done >> inputFile
