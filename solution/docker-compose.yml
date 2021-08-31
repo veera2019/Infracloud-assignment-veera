@@ -3,7 +3,7 @@ services:
   csvserver:
      image: "infracloudio/csvserver:latest"
      volumes:
-      -  C:\test\inputFile:/csvserver/inputdata:rw  
+      -  csvdata:/csvserver/inputdata:rw  
      ports:
       - "9300:9300"
      
@@ -13,4 +13,7 @@ services:
      image: "prom/prometheus:v2.22.0"
      command: "--config.file=/etc/prometheus/prometheus.yml"
      ports: 
-      - "9090:9090"      
+      - "9090:9090"
+
+ volumes:
+   csvdata:      
