@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  csvserver:
+     image: "infracloudio/csvserver:latest"
+     volumes:
+      -  C:\Users\aasamthavvave.reddy\inputFile:/csvserver/inputdata:rw  
+     ports:
+      - "9300:9300"
